@@ -166,6 +166,7 @@ main {
     border-width: 3px;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s;
 }
 
 .start__button p {
@@ -178,28 +179,82 @@ main {
     color: #fff;
 }
 
-.start__button {
-    transition: transform 0.3s;
-}
-
 .start__button:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-/*
+/* Eu não estava conseguindo colocar a tartaruga sem media query, portanto, pesquisei no stackoverflow e consegui fazer algo próximo */
 .tartaruga__start {
-    display: flex;
     position: absolute;
-    margin-top: 18%;
-    margin-left: 58%;
-    max-width: 800px;
-    height: 900px;
+    max-width: 45%;
+    max-height: 100%;
+    bottom: -40%;
+    left: auto;
+    right: 0px;
+    transform: translateX(-5%);
 }
-*/
 
 .start img {
     width: 100%;
+}
+
+
+/* Benefícios */
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficios__titulo {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: #003335;
+    width: 807px;
+    margin-top: 72px;
+}
+
+.beneficios__oportunidades {
+    display: flex;
+    gap: 4.3rem;
+    margin-top: 65px;
+    margin-bottom: 85px;
+}
+
+.beneficios__oportunidades div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.beneficios__oportunidades div i {
+    font-size: 80px;
+    background: -webkit-linear-gradient(#20BFB9, #0F5956);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.beneficios__oportunidades div h2 {
+    color: #023A40;
+    font-size: 24px;
+    font-weight: 700;
+    width: 330px;
+}
+
+.beneficios__oportunidades div p {
+    text-align: center;
+    color: #023A40;
+    font-size: 18px;
+    font-weight: 400;
+    width: 330px;
+    line-height: 150%;
 }
 
 /* Benefícios */
@@ -222,7 +277,7 @@ main {
 
 .beneficios__oportunidades {
     display: flex;
-    gap: 70px;
+    gap: 4.3rem;
     margin-top: 65px;
     margin-bottom: 85px;
 }
@@ -233,7 +288,7 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 1.8rem;
 }
 
 .beneficios__oportunidades div i {
@@ -264,7 +319,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(32, 191, 185);
     background: linear-gradient(180deg, rgba(32, 191, 185, 1) 0%, rgba(15, 89, 86, 1) 100%);
     height: 220px;
 }
@@ -309,7 +363,7 @@ main {
 
 .explore__menu ul {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .explore__menu ul li a {
@@ -331,12 +385,12 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    gap: 25px;
+    gap: 1.5rem;
 }
 
 .explore__item {
     height: 500px;
-    width: 380px;
+    width: 20rem;
     border-style: solid;
     border-radius: 17px;
     border-color: #077373;
@@ -352,7 +406,9 @@ main {
 
 .item__conteudo img {
     border-radius: 8px;
-    margin: 20px;
+    margin: 10px;
+    width: 95%;
+    height: 85%;
 }
 
 .item__conteudo h2 {
@@ -382,7 +438,7 @@ main {
 .conteudo__final {
     display: flex;
     align-items: center;
-    gap: 150px;
+    gap: 7rem;
 }
 
 .conteudo__button {
@@ -393,7 +449,6 @@ main {
     width: 100px;
     height: 30px;
     border-radius: 5px;
-    margin-left: 40px;
 }
 
 .conteudo__button p {
@@ -461,7 +516,7 @@ main {
 
 .realizados__itens {
     display: flex;
-    gap: 150px;
+    gap: 9.3rem;
 }
 
 .realizados__dados {
@@ -493,7 +548,6 @@ main {
 
 .conhecer__texto {
     text-align: center;
-    margin: 50px;
     font-size: 25px;
     font-weight: 400;
     color: #077373;
@@ -521,12 +575,12 @@ main {
 
 .conhecer__campo1 {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .conhecer__campo2 {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     margin-top: 20px;
 }
 
@@ -577,7 +631,7 @@ textarea {
     display: flex;
     justify-content: center;
     margin: 150px 0px;
-    gap: 200px;
+    gap: 5rem;
 }
 
 .apoie__conteudo h2 {
@@ -616,11 +670,16 @@ textarea {
 
 .apoie__form fieldset {
     margin-top: 50px;
-    gap: 5px;
+    margin-left: 5px;
+    gap: 0.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.apoie__check {
+    margin-left: 15px;
 }
 
 .apoie__form .apoie__campo input {
@@ -659,6 +718,7 @@ textarea {
 .check2 input {
     width: 20px;
     height: 20px;
+    margin-left: 2rem;
 }
 
 .check1 label,
@@ -718,7 +778,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 0.5rem;
 }
 
 .empresas .empresas__fundo {
