@@ -184,7 +184,6 @@ main {
     cursor: pointer;
 }
 
-/* Eu não estava conseguindo colocar a tartaruga sem media query, portanto, pesquisei no stackoverflow e consegui fazer algo próximo */
 .tartaruga__start {
     position: absolute;
     max-width: 45%;
